@@ -1,5 +1,5 @@
 ### 1. 说明
-这是一个在Teensy 3.x上测试HerkuleX电机例子，使用了[dfrobot](https://www.dfrobot.com/wiki/index.php/Herkulex_DRS-0101_SKU:SER0032)的例子，编译通过，但未上传到Teensy上测试。
+这是一个在Teensy 3.x上调试HerkuleX电机的测试代码，使用了[dfrobot](https://www.dfrobot.com/wiki/index.php/Herkulex_DRS-0101_SKU:SER0032)的例子和。[BotCortex](https://github.com/jochenalt/Walter/tree/master/code/BotCortex)中的库代码，编译通过，但未上传到Teensy上测试。
 
 ### 2. 运行
 #### IDE与编译设置
@@ -52,4 +52,4 @@ void loop(){
 
 ```
 
-为独立编译，将utilities中的代码作为一个库安装到Arduino目录中。BotCortex还包含了与上位机通讯时公用的错误定义(core)代码、机构运动控制相关的配置代码(ActuatorProperty)，以及通讯命令定义(CommDef)怠慢，都从公用目录中抽取出来，拷贝utilities中。
+为独立编译，将utilities中的代码作为一个库安装到Arduino目录中。[BotCortex](https://github.com/jochenalt/Walter/tree/master/code/BotCortex)还包含了与上位机通讯时公用的错误定义(core)代码、机构运动控制相关的配置代码(ActuatorProperty)，以及通讯命令定义(CommDef)怠慢，都从公用目录中抽取出来，拷贝utilities中。
