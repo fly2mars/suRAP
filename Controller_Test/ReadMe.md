@@ -52,4 +52,4 @@ void loop(){
 
 ```
 
-为独立编译，将utilities中的代码作为一个库安装到Arduino目录中。[BotCortex](https://github.com/jochenalt/Walter/tree/master/code/BotCortex)还包含了与上位机通讯时公用的错误定义(core)代码、机构运动控制相关的配置代码(ActuatorProperty)，以及通讯命令定义(CommDef)怠慢，都从公用目录中抽取出来，拷贝utilities中。
+为便于独立编译，将utilities中的代码作为一个库安装到Arduino目录中。[BotCortex](https://github.com/jochenalt/Walter/tree/master/code/BotCortex)还包含了与上位机通讯时公用的错误定义(core)代码、机构运动控制相关的配置代码(ActuatorProperty)，以及通讯命令定义(CommDef)代码，这里暂时将其从公用目录抽取出来，放到utilities目录中。
