@@ -72,6 +72,7 @@ HostCommunication对象中仅保留 cmd_ECHO和cmd_CHECKSUM响应进行测试。
 #include <Arduino.h>
 #include "Config.h"
 #include <i2c_t3.h>
+#include "hostCommunication.h"
 
 
 // global variables declared in pins.h
