@@ -40,27 +40,27 @@ example:
 
 #### [WalterServer](#)
 在初始化中检测端口（eg.COM3, COM4)，成功后，每10毫秒从动作规划端扫描
-'''
+```
 cortexOk = TrajectoryExecution::getInstance().setup(CortexSampleRate);
-'''
+```
 
 调用CortexController::.setupCommunication()进行连接测试：
 
-'''
+```
 bool ok= serialLog.connect(COM4, 115200);
 bool ok= serialLog.connect(COM3, 115200);
 
-'''
+```
 
 可以先去掉日志发送端口COM4的相关功能（在），只测试命令端口COM3
 
 
-'''
+```
 bool CortexController::setupCommunication(){
 //注释掉563-568行
    
 }
-'''
+```
 
 #### [Arm Contorller](#)
 
