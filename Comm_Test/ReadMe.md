@@ -35,8 +35,8 @@ CMD name在CommDef.h中定义，共8种，可根据打印过程和装备的需�
 	PRINTLN_CMD = 17
 </pre>						
 example:
-   ECHO Hello
-   MOVETO 2.20 0.00 2.00 0.00 1.00 1.00 3
+   >* ECHO Hello   
+   >* MOVETO 2.20 0.00 2.00 0.00 1.00 1.00 3
 
 #### [WalterServer](#)
 在初始化中检测端口（eg.COM3, COM4)，成功后，每10毫秒从动作规划端扫描
@@ -62,7 +62,7 @@ bool CortexController::setupCommunication(){
 }
 ```
 
-#### [Arm Contorller](#)
+#### [Arm Controller](#)
 
 
 HostCommunication对象中仅保留 cmd_ECHO和cmd_CHECKSUM响应进行测试。
