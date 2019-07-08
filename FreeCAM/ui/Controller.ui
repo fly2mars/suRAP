@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1127</width>
+    <height>738</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>FreeCAM多轴打印系统</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="cb_robot_connect">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>160</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>测试连接</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>8</y>
+      <width>341</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>机械臂状态</string>
+    </property>
+    <widget class="DictView" name="tableWidget_robot_info">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>321</width>
+       <height>121</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="cb_extruder_connect">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>397</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>连接连接</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>220</y>
+      <width>341</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>挤出机状态</string>
+    </property>
+    <widget class="DictView" name="tableWidget_extruder_info">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>321</width>
+       <height>141</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>10</y>
+      <width>741</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>代码浏览</string>
+    </property>
+    <widget class="QTextEdit" name="text_code_view">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>20</y>
+       <width>731</width>
+       <height>171</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="cb_robot_disconnect">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>160</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>设置设备</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>220</y>
+      <width>331</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>模型预览</string>
+    </property>
+    <widget class="QOpenGLWidget" name="gl_model_view">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>311</width>
+       <height>181</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_5">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>220</y>
+      <width>391</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>进程监控</string>
+    </property>
+    <widget class="QOpenGLWidget" name="gl_AR_view">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>371</width>
+       <height>181</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="cb_extruder_init">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>397</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>设置设备</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>460</y>
+      <width>341</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>打印状态</string>
+    </property>
+    <widget class="DictView" name="tableWidget_printer_info">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>321</width>
+       <height>121</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="cb_stop">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>620</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>停止</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cb_print">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>620</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>打印</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_7">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>440</y>
+      <width>741</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>控制台</string>
+    </property>
+    <widget class="QPlainTextEdit" name="text_console">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>70</y>
+       <width>731</width>
+       <height>151</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="cb_send_command">
+     <property name="geometry">
+      <rect>
+       <x>530</x>
+       <y>28</y>
+       <width>51</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>发送</string>
+     </property>
+    </widget>
+    <widget class="ComboAddress" name="comboBox_device">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>27</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>COM3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>COM4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>192.168.1.2</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLineEdit" name="text_send">
+     <property name="geometry">
+      <rect>
+       <x>6</x>
+       <y>27</y>
+       <width>521</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1127</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_file">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="action_load_gcode"/>
+    <addaction name="action_load_path"/>
+    <addaction name="action_load_model"/>
+    <addaction name="separator"/>
+    <addaction name="action_exit"/>
+   </widget>
+   <widget class="QMenu" name="menu_system">
+    <property name="title">
+     <string>系统</string>
+    </property>
+    <addaction name="action_connection_setting"/>
+    <addaction name="action_extruder_setting"/>
+    <addaction name="action_registration"/>
+    <addaction name="separator"/>
+    <addaction name="action_load_config"/>
+    <addaction name="action_save_config"/>
+   </widget>
+   <widget class="QMenu" name="menu_about">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="action_about"/>
+   </widget>
+   <addaction name="menu_file"/>
+   <addaction name="menu_system"/>
+   <addaction name="menu_about"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_about">
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+  <action name="action_connection_setting">
+   <property name="text">
+    <string>机械臂设置..</string>
+   </property>
+  </action>
+  <action name="action_extruder_setting">
+   <property name="text">
+    <string>挤出机设置..</string>
+   </property>
+  </action>
+  <action name="action_registration">
+   <property name="text">
+    <string>打印平面配准..</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+R</string>
+   </property>
+  </action>
+  <action name="action_load_gcode">
+   <property name="text">
+    <string>装入GCode..</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+G</string>
+   </property>
+  </action>
+  <action name="action_load_path">
+   <property name="text">
+    <string>装入轨迹..</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+P</string>
+   </property>
+  </action>
+  <action name="action_load_model">
+   <property name="text">
+    <string>装入模型..</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+M</string>
+   </property>
+  </action>
+  <action name="action_load_config">
+   <property name="text">
+    <string>装入配置..</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+C</string>
+   </property>
+  </action>
+  <action name="action_save_config">
+   <property name="text">
+    <string>保存配置..</string>
+   </property>
+  </action>
+  <action name="action_exit">
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="statusTip">
+    <string>退出程序</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Q</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>DictView</class>
+   <extends>QTableWidget</extends>
+   <header>ui.suWidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>ComboAddress</class>
+   <extends>QComboBox</extends>
+   <header location="global">ui.suWidgets</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

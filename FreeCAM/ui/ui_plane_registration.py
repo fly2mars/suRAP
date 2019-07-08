@@ -1,0 +1,93 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'plane_registration.ui'
+#
+# Created by: PyQt5 UI code generator 5.11.3
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_PlaneRegistrationDialog(object):
+    def setupUi(self, PlaneRegistrationDialog):
+        PlaneRegistrationDialog.setObjectName("PlaneRegistrationDialog")
+        PlaneRegistrationDialog.resize(830, 440)
+        self.pb_OK = QtWidgets.QPushButton(PlaneRegistrationDialog)
+        self.pb_OK.setGeometry(QtCore.QRect(620, 400, 93, 28))
+        self.pb_OK.setObjectName("pb_OK")
+        self.pb_Cancel = QtWidgets.QPushButton(PlaneRegistrationDialog)
+        self.pb_Cancel.setGeometry(QtCore.QRect(720, 400, 93, 28))
+        self.pb_Cancel.setObjectName("pb_Cancel")
+        self.pb_Add = QtWidgets.QPushButton(PlaneRegistrationDialog)
+        self.pb_Add.setGeometry(QtCore.QRect(30, 400, 93, 28))
+        self.pb_Add.setObjectName("pb_Add")
+        self.pb_Del = QtWidgets.QPushButton(PlaneRegistrationDialog)
+        self.pb_Del.setGeometry(QtCore.QRect(140, 400, 93, 28))
+        self.pb_Del.setObjectName("pb_Del")
+        self.pb_gen_translation = QtWidgets.QPushButton(PlaneRegistrationDialog)
+        self.pb_gen_translation.setGeometry(QtCore.QRect(370, 400, 93, 28))
+        self.pb_gen_translation.setObjectName("pb_gen_translation")
+        self.groupBox = QtWidgets.QGroupBox(PlaneRegistrationDialog)
+        self.groupBox.setGeometry(QtCore.QRect(20, 10, 511, 381))
+        self.groupBox.setObjectName("groupBox")
+        self.table_widget_points = QtWidgets.QTableWidget(self.groupBox)
+        self.table_widget_points.setGeometry(QtCore.QRect(10, 20, 491, 351))
+        self.table_widget_points.setObjectName("table_widget_points")
+        self.table_widget_points.setColumnCount(6)
+        self.table_widget_points.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.table_widget_points.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.table_widget_points.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.table_widget_points.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.table_widget_points.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.table_widget_points.setHorizontalHeaderItem(4, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.table_widget_points.setHorizontalHeaderItem(5, item)
+        self.groupBox_2 = QtWidgets.QGroupBox(PlaneRegistrationDialog)
+        self.groupBox_2.setGeometry(QtCore.QRect(550, 10, 271, 221))
+        self.groupBox_2.setObjectName("groupBox_2")
+        self.plainTextEdit = QtWidgets.QPlainTextEdit(self.groupBox_2)
+        self.plainTextEdit.setGeometry(QtCore.QRect(10, 20, 251, 191))
+        self.plainTextEdit.setObjectName("plainTextEdit")
+        self.groupBox_3 = QtWidgets.QGroupBox(PlaneRegistrationDialog)
+        self.groupBox_3.setGeometry(QtCore.QRect(550, 240, 271, 151))
+        self.groupBox_3.setObjectName("groupBox_3")
+        self.planText_message = QtWidgets.QPlainTextEdit(self.groupBox_3)
+        self.planText_message.setGeometry(QtCore.QRect(10, 20, 251, 121))
+        self.planText_message.setObjectName("planText_message")
+        self.pb_Clear = QtWidgets.QPushButton(PlaneRegistrationDialog)
+        self.pb_Clear.setGeometry(QtCore.QRect(250, 400, 93, 28))
+        self.pb_Clear.setObjectName("pb_Clear")
+
+        self.retranslateUi(PlaneRegistrationDialog)
+        QtCore.QMetaObject.connectSlotsByName(PlaneRegistrationDialog)
+
+    def retranslateUi(self, PlaneRegistrationDialog):
+        _translate = QtCore.QCoreApplication.translate
+        PlaneRegistrationDialog.setWindowTitle(_translate("PlaneRegistrationDialog", "打印平面标定"))
+        self.pb_OK.setText(_translate("PlaneRegistrationDialog", "确认"))
+        self.pb_Cancel.setText(_translate("PlaneRegistrationDialog", "取消"))
+        self.pb_Add.setText(_translate("PlaneRegistrationDialog", "添加"))
+        self.pb_Del.setText(_translate("PlaneRegistrationDialog", "删除"))
+        self.pb_gen_translation.setText(_translate("PlaneRegistrationDialog", "计算"))
+        self.groupBox.setTitle(_translate("PlaneRegistrationDialog", "定标点采集"))
+        item = self.table_widget_points.horizontalHeaderItem(0)
+        item.setText(_translate("PlaneRegistrationDialog", "x"))
+        item = self.table_widget_points.horizontalHeaderItem(1)
+        item.setText(_translate("PlaneRegistrationDialog", "y"))
+        item = self.table_widget_points.horizontalHeaderItem(2)
+        item.setText(_translate("PlaneRegistrationDialog", "z"))
+        item = self.table_widget_points.horizontalHeaderItem(3)
+        item.setText(_translate("PlaneRegistrationDialog", "rx"))
+        item = self.table_widget_points.horizontalHeaderItem(4)
+        item.setText(_translate("PlaneRegistrationDialog", "ry"))
+        item = self.table_widget_points.horizontalHeaderItem(5)
+        item.setText(_translate("PlaneRegistrationDialog", "rz"))
+        self.groupBox_2.setTitle(_translate("PlaneRegistrationDialog", "转换矩阵"))
+        self.groupBox_3.setTitle(_translate("PlaneRegistrationDialog", "信息"))
+        self.pb_Clear.setText(_translate("PlaneRegistrationDialog", "重置"))
+
