@@ -19,7 +19,12 @@ class DictView(QTableWidget):
         #self.setColumnWidth(10, 10)        
         
     
-    def bind_data(self, dict_data):
+    def bind_data(self, dict_data=None):
+        if dict_data == None:
+            dict_data = self.data
+        else:
+            self.data = dict_data
+        
         self.setRowCount(len(dict_data))
         self.setColumnCount(2)
         self.setColumnWidth(0, 120)
@@ -30,8 +35,7 @@ class DictView(QTableWidget):
             self.setItem(i, 0, QTableWidgetItem(key))
             self.setItem(i, 1, QTableWidgetItem(str(value)))
             i += 1
-        self.move(0 , 0)
-        self.data = dict_data
+        self.move(0 , 0)        
         
     def get_value(self):
         model = self.model()

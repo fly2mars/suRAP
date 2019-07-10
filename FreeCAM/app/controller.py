@@ -34,7 +34,7 @@ class Controller(object):
         self.main_window.tableWidget_extruder_info.bind_data(self.setting_extruder.data)        
         self.main_window.comboBox_device.add_address(self.setting_extruder.data)
         
-        self.main_window.update()
+        self.main_window.refresh()
         
         return
        
@@ -72,13 +72,19 @@ class Controller(object):
     @unimplemented
     def print(self):
         pass
-    @unimplemented
+    
+    #@unimplemented
     def robot_connect(self):
         ip = self.setting_robot.get('地址')
+        tcp_coord = []
         try:
-            self.robot.connect(ip)
+            tcp_coord = self.robot.connect(ip)
         except Exception as e:
-            logging.error(str(e))
+            logging.exception(str(e))
+        self.main_window.tableWidget_robot_info.data['工具坐标'] = tcp_coord
+        self.main_window.tableWidget_robot_info.bind_data()
+        self.main_window.refresh()
+        
     @unimplemented
     def robot_disconnect(self):
         pass

@@ -60,7 +60,12 @@ class Viewer(Ui_MainWindow):
         dialog.show()
         dialog.exec_()
     
-    
+    def refresh(self):
+        self.tableWidget_robot_info.setGeometry(QtCore.QRect(10, 20, 321, 121))
+        self.tableWidget_extruder_info.setGeometry(QtCore.QRect(10, 20, 321, 141))
+        self.tableWidget_printer_info.setGeometry(QtCore.QRect(10, 20, 321, 121))             
+        self.update()
+        
     def connection_setting(self):
         
         pass
@@ -70,11 +75,8 @@ class Viewer(Ui_MainWindow):
         pass
         
     def load_config(self):
-        self.controller.load_setting()    
-        self.tableWidget_robot_info.setGeometry(QtCore.QRect(10, 20, 321, 121))
-        self.tableWidget_extruder_info.setGeometry(QtCore.QRect(10, 20, 321, 141))
-        self.tableWidget_printer_info.setGeometry(QtCore.QRect(10, 20, 321, 121))
-        self.update()
+        self.controller.load_setting()            
+        self.refresh()
     
     def load_gcode(self):
         fname = QFileDialog.getOpenFileName(self, 'Open file', '', 

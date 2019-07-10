@@ -148,14 +148,14 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "FreeCAM多轴打印系统"))
-        self.cb_robot_connect.setText(_translate("MainWindow", "测试连接"))
+        self.cb_robot_connect.setText(_translate("MainWindow", "连接测试"))
         self.groupBox.setTitle(_translate("MainWindow", "机械臂状态"))
-        self.cb_extruder_connect.setText(_translate("MainWindow", "连接连接"))
+        self.cb_extruder_connect.setText(_translate("MainWindow", "连接测试"))
         self.groupBox_2.setTitle(_translate("MainWindow", "挤出机状态"))
         self.groupBox_3.setTitle(_translate("MainWindow", "代码浏览"))
         self.cb_robot_disconnect.setText(_translate("MainWindow", "设置设备"))
         self.groupBox_4.setTitle(_translate("MainWindow", "模型预览"))
-        self.groupBox_5.setTitle(_translate("MainWindow", "进程监控"))
+        self.groupBox_5.setTitle(_translate("MainWindow", "打印预览"))
         self.cb_extruder_init.setText(_translate("MainWindow", "设置设备"))
         self.groupBox_6.setTitle(_translate("MainWindow", "打印状态"))
         self.cb_stop.setText(_translate("MainWindow", "停止"))

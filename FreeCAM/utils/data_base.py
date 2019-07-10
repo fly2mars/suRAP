@@ -61,10 +61,13 @@ class WinLogger(logging.Handler):
         self.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
         logging.getLogger().addHandler(self)
         # You can control the logging level
-        logging.getLogger().setLevel(logging.DEBUG)  
+        logging.getLogger().setLevel(logging.INFO)  
         
     def emit(self, record):
         msg = self.format(record)
+        text = self.widget.toPlainText()
+        if len(text) > 5120:
+            self.widget.setPlainText('Clear\n')
         self.widget.appendPlainText(msg)
     
     def disable_console(self):
