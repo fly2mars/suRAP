@@ -20,7 +20,8 @@ class Controller(object):
         self.main_window = main_window    
         self.robot = DeviceRobot()
         self.extruder = DeviceExtruder()
-        self.gcode = GCode()
+        self.gcode = GCode()       
+        
         
         #self.load_setting()
         
@@ -60,8 +61,11 @@ class Controller(object):
     @unimplemented
     def print_plane_registration(self):
         dlg = DlgPlaneRegistration()
+        dlg.set_controller(self)
         dlg.show()
-        pass
+        self.main_window.tableWidget_robot_info.bind_data()
+        self.main_window.refresh()
+        
     @unimplemented
     def save_config(self):
         

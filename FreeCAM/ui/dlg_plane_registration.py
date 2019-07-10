@@ -85,10 +85,12 @@ class DlgPlaneRegistration(QDialog):
         self.ui.table_widget_points.setRowCount(0)
     
     def gen_translation(self):
+        
+        self.controller.setting_robot.data['matrix'] = np.random.random([4,4])
         pass
     
     def OK(self):
-        pass
+        self.close()
     
     def Cancel(self):
         self.close()
