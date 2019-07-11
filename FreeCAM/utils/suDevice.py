@@ -78,8 +78,8 @@ class DeviceRobot(DeviceBase, urx.Robot):
             p = rob.getl()
             logging.info('TCP = {}'.format(p))            
             rob.close()
-            time.sleep(2)
-        except rob.secmon._s_secondary.timeout as e:
+            time.sleep(1)
+        except Exception as e:
             logging.exception(str(e))
              
         self.is_open = False

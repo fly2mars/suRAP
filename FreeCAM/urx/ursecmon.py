@@ -242,7 +242,7 @@ class SecondaryMonitor(Thread):
         self._dictLock = Lock()
         self.host = host
         secondary_port = 30002    # Secondary client interface on Universal Robots
-        self._s_secondary = socket.create_connection((self.host, secondary_port), timeout=0.5)
+        self._s_secondary = socket.create_connection((self.host, secondary_port), timeout=5)
         self._prog_queue = []
         self._prog_queue_lock = Lock()
         self._dataqueue = bytes()
@@ -285,8 +285,9 @@ class SecondaryMonitor(Thread):
                     self._s_secondary.send(data.program)
                     with data.condition:
                         data.condition.notify_all()
-
+             
             data = self._get_data()
+                
             try:
                 tmpdict = self._parser.parse(data)
                 with self._dictLock:
@@ -329,7 +330,7 @@ class SecondaryMonitor(Thread):
         returns something that looks like a packet, nothing is guaranted
         """
         while True:
-            # self.logger.debug("data queue size is: {}".format(len(self._dataqueue)))
+            #self.logger.info("data queue size is: {}".format(len(self._dataqueue)))
             ans = self._parser.find_first_packet(self._dataqueue[:])
             if ans:
                 self._dataqueue = ans[1]
@@ -340,7 +341,7 @@ class SecondaryMonitor(Thread):
                 tmp = self._s_secondary.recv(1024)
                 self._dataqueue += tmp
 
-    def wait(self, timeout=0.5):
+    def wait(self, timeout=5):
         """
         wait for next data packet from robot
         """
